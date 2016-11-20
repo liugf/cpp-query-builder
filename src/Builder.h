@@ -14,7 +14,7 @@ namespace cpp_query_builder {
 
     class Builder {
     public:
-        Builder* From(const string &table);
+        Builder* Table(const string &table);
         Builder* Where(const string &column, const string &value);
         Builder* Where(const string &column, const string &op, const string &value);
         Builder* Where(const string &column, const int &value);

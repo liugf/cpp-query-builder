@@ -12,6 +12,6 @@ namespace cpp_query_builder {
 
     Builder *Connection::Table(const string &table) {
         Builder* query = Query();
-        return query->From(table);
+        return query->Table(table);
     }
 }

@@ -8,9 +8,9 @@ int main() {
 
     Connection conn;
     Collection collection;
-    std::unique_ptr<Builder> query(conn.Table("users"));
+    std::unique_ptr<Builder> query(conn.Query());
 
-    ret = query->Where("name", "gavin")->Where("country", "=", "China")->Where("age", 30)->Get(collection);
+    ret = query->Table("users")->Where("name", "gavin")->Where("country", "=", "China")->Where("age", 30)->Get(collection);
     if (ret) {
         return ret;
     }

@@ -6,7 +6,7 @@
 
 namespace cpp_query_builder {
 
-    Builder *Builder::From(const string &table) {
+    Builder *Builder::Table(const string &table) {
         from_ = &table;
         return this;
     }
