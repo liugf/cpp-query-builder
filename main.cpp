@@ -10,13 +10,12 @@ int main() {
     Collection collection;
     std::unique_ptr<Builder> query(conn.Query());
 
-    query->Table("users")->Where("name", "gavin")->Where("weight", 137.56)
-            ->Where("country", "=", "China")->Where("age", 30)->Select({"name", "age"});
+    query->Table("users")->Where("name", "=", "gavin")->Where("age", ">", 30);
+    query->Select({"name", "age"});
     ret = query->Get(collection);
     if (ret) {
         return ret;
     }
 
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

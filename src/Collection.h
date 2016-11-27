@@ -7,10 +7,10 @@
 
 namespace cpp_query_builder {
 
-    class Collection {
+class Collection {
 
-    };
+};
+
 }
-
 
 #endif //CPP_QUERY_BUILDER_COLLECTION_H

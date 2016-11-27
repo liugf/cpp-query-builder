@@ -12,24 +12,25 @@ using std::string;
 
 namespace cpp_query_builder {
 
-    class Connection {
-    public:
-        /**
-         * Get a new query builder instance.
-         * @return
-         */
-        Builder* Query();
+class Connection {
+ public:
+  /**
+   * Get a new query builder instance.
+   * @return
+   */
+  Builder *Query();
 
-        /**
-         * Begin a fluent query against a database table.
-         * @param table
-         * @return
-         */
-        Builder* Table(const string &table);
+  /**
+   * Begin a fluent query against a database table.
+   * @param table
+   * @return
+   */
+  Builder *Table(const string &table);
 
-    private:
+ private:
 
-    };
+};
+
 }
 
 #endif //CPP_QUERY_BUILDER_CONNECTION_H

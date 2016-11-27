@@ -6,12 +6,13 @@
 
 namespace cpp_query_builder {
 
-    Builder *Connection::Query() {
-        return new Builder;
-    }
+Builder *Connection::Query() {
+  return new Builder;
+}
 
-    Builder *Connection::Table(const string &table) {
-        Builder* query = Query();
-        return query->Table(table);
-    }
+Builder *Connection::Table(const string &table) {
+  Builder *query = Query();
+  return query->Table(table);
+}
+
 }
